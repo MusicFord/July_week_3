@@ -90,11 +90,13 @@
       z-index: -1;
     }
 
-    .telegram-button-container {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
+.telegram-button-container {
+  position: static; /* убрать absolute */
+  display: flex;
+  justify-content: center; /* по центру горизонтально */
+  margin-top: 20px; /* отступ сверху, чтобы отделить от основного контента */
+  width: 100%; /* на всю ширину */
+}
 
     .telegram-button img {
       width: 50px;
