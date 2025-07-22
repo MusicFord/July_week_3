@@ -47,17 +47,19 @@
     }
 .background-video-wrapper {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* или -2, главное чтобы меньше, чем у контента */
+  z-index: -1;
   overflow: hidden;
 }
 
 .background-video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Показывает видео целиком без обрезки */
+  object-position: center; /* Центрирует видео */
 }
     .video-row {
       display: flex;
