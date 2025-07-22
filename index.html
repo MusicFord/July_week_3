@@ -100,14 +100,15 @@
       object-fit: cover;
     }
 
-    .skill-on-top {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      pointer-events: none;
-      border-radius: 10px;
+    .skill-on-top.positioned {
+  position: absolute;
+  top: 50%;          /* Центр по вертикали */
+  left: 50%;         /* Центр по горизонтали */
+  transform: translate(-50%, -50%) scale(1); /* Центровка и масштаб */
+  width: 200px;      /* Настраиваемая ширина */
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
     }
 
     .telegram-button-container {
@@ -175,6 +176,12 @@
         <img src="11.png" class="background-img" alt="Фон 1">
 
         <!-- Видео под прозрачной PNG -->
+      <div class="gif-skill-wrapper">
+        <video class="gif-under" autoplay loop muted playsinline>
+          <source src="skill1.mp4" type="video/mp4" />
+          </video>
+          <img src="skill11.png" class="skill-on-top positioned" alt="Skill 1">
+      </div>
         <div class="gif-skill-wrapper">
           <video class="gif-under" autoplay loop muted playsinline>
             <source src="skill1.mp4" type="video/mp4" />
@@ -182,8 +189,7 @@
           <img src="skill11.png" class="skill-on-top" alt="Skill 1">
         </div>
 
-        <img src="skill11.png" class="background-img" alt="Фон 2">
-        <img src="22.gif" class="gif-overlay" alt="GIF 2">
+       
 
         <!-- Кнопка Telegram -->
         <div class="telegram-button-container">
