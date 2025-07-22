@@ -45,7 +45,20 @@
       max-width: 100%;
       display: block;
     }
+.background-video-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* или -2, главное чтобы меньше, чем у контента */
+  overflow: hidden;
+}
 
+.background-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
     .video-row {
       display: flex;
       gap: 10px;
