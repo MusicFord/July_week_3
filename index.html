@@ -70,60 +70,40 @@
       width: 75%;
       z-index: 20;
     }
-
-    .background-img {
+     .video-overlay {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-top: 0;
+    border: 3px solid #fff;
+  }
+    .gif-overlay {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            margin-top: 0; 
+     }
+    
+      .background-img {
       width: 100%;
       display: block;
       border-radius: 10px;
       border: 3px solid #fff;
     }
-
-    .gif-overlay {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-      margin-top: 0;
-    }
-
-    /* Обертка: видео снизу, прозрачная PNG сверху */
-    .gif-skill-wrapper {
-      position: relative;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .gif-under {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .skill-on-top.positioned {
-  position: absolute;
-  top: 50%;          /* Центр по вертикали */
-  left: 50%;         /* Центр по горизонтали */
-  transform: translate(-50%, -50%) scale(1); /* Центровка и масштаб */
-  width: 200px;      /* Настраиваемая ширина */
-  height: auto;
-  pointer-events: none;
-  z-index: 2;
-    }
-
-    .telegram-button-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100%;
-      padding-bottom: 10px;
-    }
-
+.telegram-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 10px;
+}
+    /* Telegram кнопка */
     .telegram-button {
+      
       width: 128px;
-      height: 128px;
-      display: block;
-      z-index: 30;
+  height: 128px;
+  display: block;
+  z-index: 30;
     }
 
     .telegram-button img {
@@ -173,31 +153,21 @@
 
     <div class="gallery">
       <div class="image-container">
-        <img src="11.png" class="background-img" alt="Фон 1">
-
-        <!-- Видео под прозрачной PNG -->
-      <div class="gif-skill-wrapper">
-        <video class="gif-under" autoplay loop muted playsinline>
-          <source src="skill1.mp4" type="video/mp4" />
-          </video>
-          <img src="skill11.png" class="skill-on-top positioned" alt="Skill 1">
-      </div>
-        <div class="gif-skill-wrapper">
-          <video class="gif-under" autoplay loop muted playsinline>
-            <source src="skill1.mp4" type="video/mp4" />
-          </video>
-          <img src="skill11.png" class="skill-on-top" alt="Skill 1">
-        </div>
-
-       
-
+          <img src="11.png" class="background-img" alt="Фон 1">
+          <video class="video-overlay" autoplay loop muted playsinline>
+        <source src="skill1.mp4" type="video/mp4">
+            <source src="skill2.mp4" type="video/mp4">
+            <source src="skill3.mp4" type="video/mp4">
+            <source src="skill4.mp4" type="video/mp4">
+      </video>
+        
         <!-- Кнопка Telegram -->
         <div class="telegram-button-container">
-          <a href="https://t.me/yourchannel" target="_blank" class="telegram-button">
-            <img src="tg.png" alt="Telegram">
-          </a>
+        <a href="https://t.me/yourchannel" target="_blank" class="telegram-button">
+          <img src="tg.png" alt="Telegram">
+        </a>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
