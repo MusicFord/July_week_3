@@ -70,40 +70,57 @@
       width: 75%;
       z-index: 20;
     }
-     .video-overlay {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    margin-top: 0;
-    border: 3px solid #fff;
-  }
-    .gif-overlay {
-            width: 100%;
-            display: block;
-            border-radius: 10px;
-            margin-top: 0; 
-     }
-    
-      .background-img {
+
+    .background-img {
       width: 100%;
       display: block;
       border-radius: 10px;
       border: 3px solid #fff;
     }
-.telegram-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  padding-bottom: 10px;
-}
-    /* Telegram кнопка */
+
+    .video-overlay {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: 3px solid #fff;
+    }
+
+    .video-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .video-row video {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .video-row video:hover {
+      transform: scale(1.05);
+    }
+
+    .telegram-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+
     .telegram-button {
-      
       width: 128px;
-  height: 128px;
-  display: block;
-  z-index: 30;
+      height: 128px;
+      display: block;
+      z-index: 30;
     }
 
     .telegram-button img {
@@ -119,7 +136,6 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.6);
     }
 
-    /* Анимация появления */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -153,33 +169,37 @@
 
     <div class="gallery">
       <div class="image-container">
-          <img src="11.png" class="background-img" alt="Фон 1">
-          <video class="video-overlay" autoplay loop muted playsinline>
-        <source src="skill1.mp4" type="video/mp4">
-        
-      </video>
-         <div class="video-container">
-        <video autoplay loop muted playsinline>
-          <source src="skill2.mp4" type="video/mp4">
+        <img src="11.png" class="background-img" alt="Фон 1">
+
+        <!-- Видеоряд ПОД изображением -->
+        <div class="video-row">
+          <video autoplay loop muted playsinline>
+            <source src="skill1.mp4" type="video/mp4">
+          </video>
+          <video autoplay loop muted playsinline>
+            <source src="skill2.mp4" type="video/mp4">
+          </video>
+          <video autoplay loop muted playsinline>
+            <source src="skill3.mp4" type="video/mp4">
+          </video>
+          <video autoplay loop muted playsinline>
+            <source src="skill4.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Второй блок -->
+        <img src="22.png" class="background-img" alt="Фон 2">
+        <video class="video-overlay" autoplay loop muted playsinline>
+          <source src="22.mp4" type="video/mp4">
         </video>
-      </div>
-         <div class="video-container">
-        <video autoplay loop muted playsinline>
-          <source src="skill3.mp4" type="video/mp4">
-        </video>
-      </div>
-         <div class="video-container">
-        <video autoplay loop muted playsinline>
-          <source src="skill4.mp4" type="video/mp4">
-        </video>
-      </div>
+
         <!-- Кнопка Telegram -->
         <div class="telegram-button-container">
-        <a href="https://t.me/yourchannel" target="_blank" class="telegram-button">
-          <img src="tg.png" alt="Telegram">
-        </a>
-          </div>
+          <a href="https://t.me/yourchannel" target="_blank" class="telegram-button">
+            <img src="tg.png" alt="Telegram">
+          </a>
         </div>
+      </div>
     </div>
   </div>
 
