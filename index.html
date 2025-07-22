@@ -85,7 +85,7 @@
       margin-top: 0;
     }
 
-    /* Обертка: гиф снизу, прозрачная PNG сверху */
+    /* Обертка: видео снизу, прозрачная PNG сверху */
     .gif-skill-wrapper {
       position: relative;
       width: 100%;
@@ -97,6 +97,7 @@
       width: 100%;
       display: block;
       border-radius: 10px;
+      object-fit: cover;
     }
 
     .skill-on-top {
@@ -173,9 +174,11 @@
       <div class="image-container">
         <img src="11.png" class="background-img" alt="Фон 1">
 
-        <!-- Гиф под прозрачной PNG -->
+        <!-- Видео под прозрачной PNG -->
         <div class="gif-skill-wrapper">
-          <img src="skill1.mp4" class="gif-under" alt="GIF 1">
+          <video class="gif-under" autoplay loop muted playsinline>
+            <source src="skill1.mp4" type="video/mp4" />
+          </video>
           <img src="skill11.png" class="skill-on-top" alt="Skill 1">
         </div>
 
